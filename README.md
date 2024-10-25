@@ -41,4 +41,4 @@ To run this project locally:
 - Click on GitHub links to see the source code of projects or view live demos.
 
 ## Live Demo
-You can view the live version of this website on [GitHub Pages](https://yourusername.github.io/my-portfolio/).
+You can view the live version of this website on at https://portfolio.landingsnet.com/.
