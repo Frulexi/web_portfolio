@@ -1,6 +1,6 @@
 # My Web Portfolio
 
-Welcome to my portfolio website repository! This project is a personal website showcasing my skills, experience, and projects as a System Administrator transitioning into cybersecurity. It includes sections like **About Me**, **Experience**, **Projects**, and **Contact** information.
+Welcome to my portfolio website repository! This project is a personal website showcasing my skills, experience, and projects as a Senior Tech Ops Specialist with expertise in system administration, DevOps, and cybersecurity. It includes sections like **About Me**, **Experience**, **Projects**, and **Contact** information.
 
 ## Table of Contents
 - [Features](#features)
@@ -10,17 +10,22 @@ Welcome to my portfolio website repository! This project is a personal website s
 - [Live Demo](#live-demo)
 
 ## Features
-- **Responsive Design**: Adapts to various screen sizes using CSS media queries.
-- **Navigation**: Desktop and mobile navigation menus for easy access.
-- **Profile Section**: A brief introduction with a downloadable CV.
-- **Experience Section**: Details of professional work experience.
-- **Projects Section**: Showcase of recent projects with links to GitHub and live demos.
-- **Contact Section**: Ways to connect via email and LinkedIn.
+- **Responsive Design**: Modern, responsive layout using Bootstrap and custom CSS.
+- **Navigation**: Smooth-scrolling navigation with Bootstrap navbar.
+- **Profile Section**: Professional introduction with downloadable CV and social links.
+- **Experience Section**: Detailed work history with key responsibilities.
+- **Projects Section**: Showcase of technical projects:
+  - Docker Self-Hosted Lab Infrastructure
+  - Apple Card Transaction to CSV Converter
+- **Contact Section**: Professional contact information and social links.
 
 ## Technologies Used
-- **HTML5**: For structuring the content.
-- **CSS3**: For styling the website, including responsive media queries.
-- **JavaScript**: For adding interactivity (e.g., hamburger menu toggle).
+- **Frontend**:
+  - HTML
+  - CSS
+  - JavaScript
+  - Bootstrap
+  - Font Awesome
 
 ## Setup
 To run this project locally:
@@ -35,11 +40,13 @@ To run this project locally:
 3. Open `index.html` in your browser to view the website.
 
 ## Usage
-- You can navigate through different sections using the navigation bar.
-- Download the CV by clicking the "Download CV" button.
-- View detailed work experience, projects, and certifications.
-- Click on GitHub links to see the source code of projects or view live demos.
+- Navigate through sections using the responsive navigation bar
+- Download CV using the "Download CV" button
+- Explore work experience and certifications
+- View project details and access:
+  - GitHub repositories
+  - Live demos (where available)
 
 ## Live Demo
-You can view the live version of this website on at https://fruendly.landingsnet.com . 
-Hosted using cloudflare pages.
+You can view the live version of this website at https://fruendly.landingsnet.com
+Hosted using Cloudflare Pages.
