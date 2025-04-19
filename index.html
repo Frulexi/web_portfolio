@@ -5,99 +5,121 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fruendly's Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Fruendly Alexis</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience2">Experience</a></li>
-          <li><a href="#certificates">Certificates</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="#">Fruendly Alexis</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience2">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#certificates">Certificates</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Fruendly Alexis</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+
+    <!-- Profile Section -->
+    <section id="profile" class="container">
+      <div class="row align-items-center min-vh-100 pt-5">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="section__pic-container">
+            <img src="./assets/profile2.png" alt="Fruendly Alexis profile picture" class="img-fluid rounded shadow" />
+          </div>
         </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile2.png" alt="John Doe profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Fruendly Alexis</h1>
-        <p class="section__text__p2">System Administrator</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/FruendlyResume.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="openlink('https://www.linkedin.com/in/fruendly-alexis-a348a8152');"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="window.open('https://github.com/Frulexi', '_blank')"
-          />
+        <div class="col-lg-6">
+          <div class="section__text text-center text-lg-start">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Fruendly Alexis</h1>
+            <p class="section__text__p2">Senior Tech Ops Specialist</p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2"
+                onclick="window.open('./assets/FruendlyResume.pdf')"
+              >
+                Download CV
+              </button>
+              <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                Contact Info
+              </button>
+            </div>
+            <div id="socials-container">
+              <img
+                src="./assets/linkedin.png"
+                alt="My LinkedIn profile"
+                class="icon"
+                onclick="openlink('https://www.linkedin.com/in/fruendly-alexis-a348a8152');"
+              />
+              <img
+                src="./assets/github.png"
+                alt="My Github profile"
+                class="icon"
+                onclick="window.open('https://github.com/Frulexi', '_blank')"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
 
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>4+ years <br />System administration </p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>Bachelors Degree<br />CyberSecurity & Information Insurance</p>
+    <!-- About Section -->
+    <section id="about" class="container py-5">
+      <p class="section__text__p1 text-center">Get To Know More</p>
+      <h1 class="title text-center">About Me</h1>
+      <div class="row mt-4">
+        <div class="col-md-6 mb-4">
+          <div class="about-details-container">
+            <div class="row g-4">
+              <div class="col-sm-6">
+                <div class="details-container">
+                  <img
+                    src="./assets/experience.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <h3>Experience</h3>
+                  <p>4+ years <br />System administration </p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="details-container">
+                  <img
+                    src="./assets/education.png"
+                    alt="Education icon"
+                    class="icon"
+                  />
+                  <h3>Education</h3>
+                  <p>Bachelors Degree<br />CyberSecurity & Information Insurance</p>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+        <div class="col-md-6">
           <div class="text-container">
             <p>
               IT professional with a strong foundation in security and a growing passion for DevOps and cloud operations. 
@@ -108,246 +130,271 @@
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
     </section>
-    <section id="experience2">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience2-details-container single-container">
-        <div class="job-container">
-          <h3 class="job-title">Senior Tech Ops Specialist</h3>
-          <h4 class="company">INSHUR</h4>
-          <p class="job-dates">February 2023 - Present</p>
-          <ul class="responsibilities">
-            <li>Managing a fleet of (Mac/Windows) devices using Jamf and Intune for over 400 Global employees.</li>
-            <li>Participating in internal vulnerability triage efforts via HackerOne.</li>
-            <li>Contributing to internal tooling with AppScript, Python, and Docker.</li>
-            <li>Supporting and training junior members of the team.</li>
-          </ul>
+
+    <!-- Experience Section -->
+    <section id="experience2" class="container py-5">
+      <p class="section__text__p1 text-center">Explore My</p>
+      <h1 class="title text-center">Experience</h1>
+      <div class="row mt-4">
+        <div class="col-md-4 mb-4">
+          <div class="job-container">
+            <h3 class="job-title">Senior Tech Ops Specialist</h3>
+            <h4 class="company">INSHUR</h4>
+            <p class="job-dates">February 2023 - Present</p>
+            <ul class="responsibilities">
+              <li>Managing a fleet of (Mac/Windows) devices using Jamf and Intune for over 400 Global employees.</li>
+              <li>Participating in internal vulnerability triage efforts via HackerOne.</li>
+              <li>Contributing to internal tooling with AppScript, Python, and Docker.</li>
+              <li>Supporting and training junior members of the team.</li>
+            </ul>
+          </div>
         </div>
-        <div class="job-container">
-          <h3 class="job-title">Tech Ops Specialist</h3>
-          <h4 class="company">INSHUR</h4>
-          <p class="job-dates">June 2023 - February 2025</p>
-          <ul class="responsibilities">
-            <li>Managed MDMs (Jamf, Intune) and Protection (Sophos), ensuring compliance with security policies</li>
-            <li>Secured user accounts in Google Workspace / O365, identity management, and access control best practices</li>
-            <li>Provided infrastructure support using GCP, GitHub, and HackerOne platforms.</li>
-            <li>Delivered support using: Postman, Python, JavaScript, MongoDB, BigQuery, SQL.</li>
-          </ul>
+        <div class="col-md-4 mb-4">
+          <div class="job-container">
+            <h3 class="job-title">Tech Ops Specialist</h3>
+            <h4 class="company">INSHUR</h4>
+            <p class="job-dates">June 2023 - February 2025</p>
+            <ul class="responsibilities">
+              <li>Managed MDMs (Jamf, Intune) and Protection (Sophos), ensuring compliance with security policies</li>
+              <li>Secured user accounts in Google Workspace / O365, identity management, and access control best practices</li>
+              <li>Provided infrastructure support using GCP, GitHub, and HackerOne platforms.</li>
+              <li>Delivered support using: Postman, Python, JavaScript, MongoDB, BigQuery, SQL.</li>
+            </ul>
+          </div>
         </div>
-        <div class="job-container">
-          <h3 class="job-title">Level II Technician</h3>
-          <h4 class="company">Future Tech</h4>
-          <p class="job-dates">June 2021 - June 2023</p>
-          <ul class="responsibilities">
-            <li>Provided technical support for hardware and software issues.</li>
-            <li>Assisted in network troubleshooting and maintenance.</li>
-            <li>Trained junior technicians and documented processes.</li>
-          </ul>
+        <div class="col-md-4 mb-4">
+          <div class="job-container">
+            <h3 class="job-title">Level II Technician</h3>
+            <h4 class="company">Future Tech</h4>
+            <p class="job-dates">June 2021 - June 2023</p>
+            <ul class="responsibilities">
+              <li>Provided technical support for hardware and software issues.</li>
+              <li>Assisted in network troubleshooting and maintenance.</li>
+              <li>Trained junior technicians and documented processes.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
     
-    <section id="certificates">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Certificates</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
+    <!-- Certificates Section -->
+    <section id="certificates" class="container py-5">
+      <p class="section__text__p1 text-center">Explore My</p>
+      <h1 class="title text-center">Certificates</h1>
+      <div class="row mt-4">
+        <div class="col-md-6 mb-4">
           <div class="details-container">
             <h2 class="experience-sub-title">Security</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/CompTIA_PenTest_2B.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PenTest+</h3>
-                  <p>June 2024</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/Comptia_CySA_2Bce.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CySA+</h3>
-                  <p>April 2024</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/ISC2_SSCP.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SSCP</h3>
-                  <p>March 2024</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/CompTIA_Security_2Bce.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Security+</h3>
-                  <p>Oct 2023</p>
-                </div>
-              </article>
+            <div class="row g-4">
+              <div class="col-sm-6">
+                <article>
+                  <img
+                    src="./assets/CompTIA_PenTest_2B.png"
+                    alt="PenTest+ certificate"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>PenTest+</h3>
+                    <p>June 2024</p>
+                  </div>
+                </article>
+              </div>
+              <div class="col-sm-6">
+                <article>
+                  <img
+                    src="./assets/Comptia_CySA_2Bce.png"
+                    alt="CySA+ certificate"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>CySA+</h3>
+                    <p>April 2024</p>
+                  </div>
+                </article>
+              </div>
+              <div class="col-sm-6">
+                <article>
+                  <img
+                    src="./assets/ISC2_SSCP.png"
+                    alt="SSCP certificate"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>SSCP</h3>
+                    <p>March 2024</p>
+                  </div>
+                </article>
+              </div>
+              <div class="col-sm-6">
+                <article>
+                  <img
+                    src="./assets/CompTIA_Security_2Bce.png"
+                    alt="Security+ certificate"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Security+</h3>
+                    <p>Oct 2023</p>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
+        </div>
+        <div class="col-md-6 mb-4">
           <div class="details-container">
             <h2 class="experience-sub-title">Other</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/CompTIA_Project_2B.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Project+</h3>
-                  <p>July 2023</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/CompTIA_Project_2B.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Network+</h3>
-                  <p>March 2023</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/CompTIA_A_2Bce.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>A+</h3>
-                  <p>Dec 2022</p>
-                </div>
-              </article>
+            <div class="row g-4">
+              <div class="col-sm-6">
+                <article>
+                  <img
+                    src="./assets/CompTIA_Project_2B.png"
+                    alt="Project+ certificate"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Project+</h3>
+                    <p>July 2023</p>
+                  </div>
+                </article>
+              </div>
+              <div class="col-sm-6">
+                <article>
+                  <img
+                    src="./assets/CompTIA_Project_2B.png"
+                    alt="Network+ certificate"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Network+</h3>
+                    <p>March 2023</p>
+                  </div>
+                </article>
+              </div>
+              <div class="col-sm-6">
+                <article>
+                  <img
+                    src="./assets/CompTIA_A_2Bce.png"
+                    alt="A+ certificate"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>A+</h3>
+                    <p>Dec 2022</p>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
     </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/docker2.webp"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Docker: HomeLab</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Frulexi/self_hosted/'"
-              >
-                Github
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/pricepatrol.webp"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Price Patrol</h2>
-            <div class="btn-container">
-            <!---
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'" 
-              >
-                Pending
-              </button>
-            -->
-              <button
-                class="btn btn-color-2 project-btn"
 
-              >
-                Coming Soon
-              </button>
+    <!-- Projects Section -->
+    <section id="projects" class="container py-5">
+      <p class="section__text__p1 text-center">Check Out My</p>
+      <h1 class="title text-center">Projects</h1>
+      <div class="row mt-4">
+        <div class="col-md-6 mb-4">
+          <div class="project-container">
+            <div class="project-image">
+              <img src="./assets/selfhosted.png" alt="Docker Self-Hosted Lab" class="img-fluid rounded shadow-sm">
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Docker Self-Hosted Lab Infrastructure</h3>
+              <p class="project-description">
+                A comprehensive Docker-powered self-hosted lab managed by Terraform. Features include Flame for centralized access, 
+                NGINX Proxy Manager for reverse proxy with SSL, NextCloud for file-sharing, MariaDB for database services, 
+                and Portainer for container management.
+              </p>
+              <div class="project-tech">
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">Terraform</span>
+                <span class="tech-badge">NextCloud</span>
+                <span class="tech-badge">MariaDB</span>
+                <span class="tech-badge">Portainer</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Frulexi/self_hosted" target="_blank" class="btn btn-sm btn-outline-primary">
+                  <i class="fab fa-github"></i> View Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="project-container">
+            <div class="project-image">
+              <img src="./assets/appletrans.png" alt="Apple Card to CSV Converter" class="img-fluid rounded shadow-sm">
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Apple Card Transaction to CSV Converter</h3>
+              <p class="project-description">
+                A Flask web application that converts Apple Card transaction screenshots into structured CSV files using OCR (Tesseract). 
+                Features include transaction extraction, editable data interface, and CSV export functionality.
+              </p>
+              <div class="project-tech">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Flask</span>
+                <span class="tech-badge">OCR</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">Docker</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Frulexi/apple_trans_to_csv" target="_blank" class="btn btn-sm btn-outline-primary">
+                  <i class="fab fa-github"></i> View Code
+                </a>
+                <a href="https://appletrans.landingsnet.com/" target="_blank" class="btn btn-sm btn-outline-secondary">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
     </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:fruendly@landingsnet.com">fruendly@landingsnet.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/fruendly-alexis-a348a8152/">LinkedIn</a></p>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container py-5">
+      <p class="section__text__p1 text-center">Get in Touch</p>
+      <h1 class="title text-center">Contact Me</h1>
+      <div class="row justify-content-center mt-4">
+        <div class="col-md-8">
+          <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+              <img
+                src="./assets/email.png"
+                alt="Email icon"
+                class="icon contact-icon"
+              />
+              <p>
+                <a href="mailto:fruendly.alexis@gmail.com">fruendly.alexis@gmail.com</a>
+              </p>
+            </div>
+            <div class="contact-info-container">
+              <img
+                src="./assets/linkedin.png"
+                alt="LinkedIn icon"
+                class="icon contact-icon"
+              />
+              <p>
+                <a href="https://www.linkedin.com/in/fruendly-alexis-a348a8152" target="_blank">LinkedIn</a>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <!-- <p>Copyright &#169; 2024 Fruendly Alexis. All Rights Reserved.</p> -->
+
+    <!-- Footer -->
+    <footer class="py-4 text-center">
+      <p>© 2024 Fruendly Alexis. All rights reserved.</p>
     </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
     <script src="script.js"></script>
   </body>
 </html>
