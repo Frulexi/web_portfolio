@@ -1,6 +1,6 @@
 # Fruendly Alexis — Web Portfolio
 
-Modern, high-performance portfolio website engineered with a **Cyber / DevOps Terminal** aesthetic. Built for **Fruendly Alexis**, Senior Tech Ops Specialist and DevOps Engineer, highlighting enterprise fleet management, Google Cloud, cybersecurity credentials, and production homelab infrastructure.
+Modern, high-performance portfolio website engineered with a **Cyber / DevOps Terminal** aesthetic. Built for **Fruendly Alexis**, Senior Tech Ops Specialist, highlighting enterprise fleet management, Google Cloud, autonomous AI agent infrastructure, cybersecurity credentials, and production homelab systems.
 
 Live Site: [https://fruendly.landingsnet.com](https://fruendly.landingsnet.com) (Hosted on Cloudflare Pages)
 
@@ -10,14 +10,15 @@ Live Site: [https://fruendly.landingsnet.com](https://fruendly.landingsnet.com) 
 
 - **Cyber / Terminal Aesthetic**: High-contrast obsidian slate palette, glowing neon cyan/emerald accents, terminal window frames with macOS-style window controls, and subtle scanline/matrix background grids.
 - **Interactive Hero Console**:
-  - Live interactive CLI terminal widget supporting commands (`help`, `skills`, `homelab`, `certs`, `projects`, `contact`, `clear`, `whoami`).
+  - Live interactive CLI terminal widget supporting commands (`help`, `skills`, `agents`, `homelab`, `certs`, `projects`, `contact`, `clear`, `whoami`).
   - Real-time status beacon (`OPERATIONAL // OPEN TO OPPORTUNITIES`).
   - Key operational metrics strip: **400+ Fleet Endpoints**, **8 Industry Certifications**, **4+ Years in Ops**, **99.9% Lab Uptime**.
 - **About & Technical Arsenal Bento**:
-  - Narrative bridging cybersecurity foundations with DevOps automation and cloud operations.
-  - Categorized technical competencies: Cloud & DevOps, Fleet & Endpoint Engineering (Jamf Pro & Intune), Security & Identity Governance, and Automation/Tooling.
+  - Narrative bridging cybersecurity foundations with cloud operations and autonomous AI engineering.
+  - Categorized technical competencies: Cloud & Infrastructure, Fleet & Endpoint Engineering (Jamf Pro & Intune), Security & Identity Governance, and AI Engineering / Systems Automation.
 - **Enterprise Homelab & DevOps Showcase**:
-  - Detailed architecture breakdown: Proxmox VE hypervisor, UniFi Gateway Ultra with VLAN isolation, Twingate SDP / Cloudflare Zero Trust Tunnels, and Docker microservices (Portainer, Nextcloud, NPM, MariaDB).
+  - Detailed architecture breakdown: Proxmox VE hypervisor, UniFi Gateway Ultra with VLAN isolation, Twingate SDP / Cloudflare Zero Trust Tunnels, and Docker microservices.
+  - **Autonomous AI Agent Fleet**: Distributed multi-agent operational network featuring **Max** (Proxmox LXC agent with direct hypervisor/network/ITAM APIs) and **Mini** (Apple Silicon M1 edge dispatcher).
   - Highlight of **Turnkey Homelabs** appliance venture on Dell OptiPlex Micro Form Factor hardware running Proxmox VE.
 - **Career Timeline**:
   - Documented roles at INSHUR (Senior Tech Ops Specialist, Tech Ops Specialist) and Future Tech (Level II Technician).

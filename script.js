@@ -95,6 +95,7 @@ function initSmoothScroll() {
 const cliCommands = {
   help: `Available commands:<br/>
   - <span class="text-cyan">skills</span>: view core tech stack & competencies<br/>
+  - <span class="text-cyan">agents</span>: inspect autonomous AI agent fleet (Max & Mini)<br/>
   - <span class="text-cyan">homelab</span>: inspect Proxmox & UniFi homelab specs<br/>
   - <span class="text-cyan">certs</span>: list active industry certifications<br/>
   - <span class="text-cyan">projects</span>: list highlighted technical builds<br/>
@@ -104,9 +105,19 @@ const cliCommands = {
 
   skills: `Core Capabilities:<br/>
   - <span class="text-emerald">Cloud/IaC</span>: GCP, Docker, Docker Compose, Terraform, Ansible, Linux<br/>
+  - <span class="text-emerald">AI & Automation</span>: Autonomous agents (Max/Mini), Claude GenAI, Ollama, Python, AppScript<br/>
   - <span class="text-emerald">Fleet Ops</span>: Jamf Pro, Microsoft Intune, 400+ endpoints<br/>
-  - <span class="text-emerald">Security</span>: HackerOne triage, Sophos EDR, IAM, Least Privilege<br/>
-  - <span class="text-emerald">Scripting</span>: Python, Google AppScript, Bash, SQL, REST APIs`,
+  - <span class="text-emerald">Security</span>: HackerOne triage, 2FA bypass defense, Sophos EDR, IAM, Least Privilege`,
+
+  agents: `Autonomous Agent Network:<br/>
+  - <span class="text-cyan">Node [max-agent]</span>: Proxmox LXC agent with direct hypervisor, UniFi, and Snipe-IT ITAM telemetry for 24/7 homelab ops.<br/>
+  - <span class="text-cyan">Node [mini]</span>: Apple Silicon M1 edge node handling secure message dispatching & edge bridging.<br/>
+  - <span class="text-cyan">Inference & Governance</span>: Local LLM (RTX 3080 / Ollama) + Claude tool-calling pipelines with human-in-the-loop security gates.`,
+
+  ai: `Autonomous Agent Network:<br/>
+  - <span class="text-cyan">Node [max-agent]</span>: Proxmox LXC agent with direct hypervisor, UniFi, and Snipe-IT ITAM telemetry for 24/7 homelab ops.<br/>
+  - <span class="text-cyan">Node [mini]</span>: Apple Silicon M1 edge node handling secure message dispatching & edge bridging.<br/>
+  - <span class="text-cyan">Inference & Governance</span>: Local LLM (RTX 3080 / Ollama) + Claude tool-calling pipelines with human-in-the-loop security gates.`,
 
   homelab: `Homelab Environment:<br/>
   - <span class="text-cyan">Hypervisor</span>: Proxmox VE (owl-prox) with LXCs and VMs<br/>
@@ -129,7 +140,7 @@ const cliCommands = {
   - LinkedIn: <a href="https://www.linkedin.com/in/fruendly-alexis-a348a8152" target="_blank" class="text-cyan">linkedin.com/in/fruendly-alexis</a><br/>
   - GitHub: <a href="https://github.com/Frulexi" target="_blank" class="text-cyan">github.com/Frulexi</a>`,
 
-  whoami: `Fruendly Alexis — Senior Tech Ops Specialist, DevOps Engineer, Systems Security Practitioner.`,
+  whoami: `Fruendly Alexis — Senior Tech Ops Specialist (SecOps & Systems), Cybersecurity Practitioner.`,
 
   sudo: `Permission denied: you are already in guest operational mode. Use 'help' to navigate.`,
 
