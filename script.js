@@ -125,7 +125,7 @@ const cliCommands = {
   - <span class="text-cyan">Turnkey Homelabs</span>: Pre-configured Proxmox micro server appliances`,
 
   contact: `Transmission Coordinates:<br/>
-  - Email: <a href="mailto:fruendly.alexis@gmail.com" class="text-cyan">fruendly.alexis@gmail.com</a><br/>
+  - Email: <a href="mailto:fruendly@landingsnet.com" class="text-cyan">fruendly@landingsnet.com</a><br/>
   - LinkedIn: <a href="https://www.linkedin.com/in/fruendly-alexis-a348a8152" target="_blank" class="text-cyan">linkedin.com/in/fruendly-alexis</a><br/>
   - GitHub: <a href="https://github.com/Frulexi" target="_blank" class="text-cyan">github.com/Frulexi</a>`,
 

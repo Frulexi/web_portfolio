@@ -60,6 +60,6 @@ python3 -m http.server 8080
 
 ## 📬 Contact
 
-- **Email**: [fruendly.alexis@gmail.com](mailto:fruendly.alexis@gmail.com)
+- **Email**: [fruendly@landingsnet.com](mailto:fruendly@landingsnet.com)
 - **LinkedIn**: [linkedin.com/in/fruendly-alexis-a348a8152](https://www.linkedin.com/in/fruendly-alexis-a348a8152)
 - **GitHub**: [github.com/Frulexi](https://github.com/Frulexi)
