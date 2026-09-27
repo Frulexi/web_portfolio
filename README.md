@@ -1,52 +1,65 @@
-# My Web Portfolio
+# Fruendly Alexis — Web Portfolio
 
-Welcome to my portfolio website repository! This project is a personal website showcasing my skills, experience, and projects as a Senior Tech Ops Specialist with expertise in system administration, DevOps, and cybersecurity. It includes sections like **About Me**, **Experience**, **Projects**, and **Contact** information.
+Modern, high-performance portfolio website engineered with a **Cyber / DevOps Terminal** aesthetic. Built for **Fruendly Alexis**, Senior Tech Ops Specialist and DevOps Engineer, highlighting enterprise fleet management, Google Cloud, cybersecurity credentials, and production homelab infrastructure.
 
-## Table of Contents
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Setup](#setup)
-- [Usage](#usage)
-- [Live Demo](#live-demo)
+Live Site: [https://fruendly.landingsnet.com](https://fruendly.landingsnet.com) (Hosted on Cloudflare Pages)
 
-## Features
-- **Responsive Design**: Modern, responsive layout using Bootstrap and custom CSS.
-- **Navigation**: Smooth-scrolling navigation with Bootstrap navbar.
-- **Profile Section**: Professional introduction with downloadable CV and social links.
-- **Experience Section**: Detailed work history with key responsibilities.
-- **Projects Section**: Showcase of technical projects:
-  - Docker Self-Hosted Lab Infrastructure
-  - Apple Card Transaction to CSV Converter
-- **Contact Section**: Professional contact information and social links.
+---
 
-## Technologies Used
-- **Frontend**:
-  - HTML
-  - CSS
-  - JavaScript
-  - Bootstrap
-  - Font Awesome
+## ⚡ Design & Architectural Highlights
 
-## Setup
-To run this project locally:
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/frulexi/web_portfolio
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd web_portfolio
-   ```
-3. Open `index.html` in your browser to view the website.
+- **Cyber / Terminal Aesthetic**: High-contrast obsidian slate palette, glowing neon cyan/emerald accents, terminal window frames with macOS-style window controls, and subtle scanline/matrix background grids.
+- **Interactive Hero Console**:
+  - Live interactive CLI terminal widget supporting commands (`help`, `skills`, `homelab`, `certs`, `projects`, `contact`, `clear`, `whoami`).
+  - Real-time status beacon (`OPERATIONAL // OPEN TO OPPORTUNITIES`).
+  - Key operational metrics strip: **400+ Fleet Endpoints**, **8 Industry Certifications**, **4+ Years in Ops**, **99.9% Lab Uptime**.
+- **About & Technical Arsenal Bento**:
+  - Narrative bridging cybersecurity foundations with DevOps automation and cloud operations.
+  - Categorized technical competencies: Cloud & DevOps, Fleet & Endpoint Engineering (Jamf Pro & Intune), Security & Identity Governance, and Automation/Tooling.
+- **Enterprise Homelab & DevOps Showcase**:
+  - Detailed architecture breakdown: Proxmox VE hypervisor, UniFi Gateway Ultra with VLAN isolation, Twingate SDP / Cloudflare Zero Trust Tunnels, and Docker microservices (Portainer, Nextcloud, NPM, MariaDB).
+  - Highlight of **Turnkey Homelabs** appliance venture on Dell OptiPlex Micro Form Factor hardware running Proxmox VE.
+- **Career Timeline**:
+  - Documented roles at INSHUR (Senior Tech Ops Specialist, Tech Ops Specialist) and Future Tech (Level II Technician).
+- **Interactive Certifications Matrix**:
+  - Filter tabs by category (All, Cloud, Security, Infrastructure).
+  - High-resolution badges for Google Cloud Associate Cloud Engineer (GCCA), CompTIA PenTest+, CySA+, SSCP, Security+, Network+, Project+, and A+.
+- **Featured Projects**:
+  - **Docker Self-Hosted Lab Infrastructure**: Terraform-managed self-hosted cloud stack.
+  - **Apple Card to CSV Converter**: Full-stack Python/Flask app with Tesseract OCR, live demo link.
+- **Zero-Build Vanilla Architecture**: Pure HTML5, modern CSS3 (custom custom properties, flexbox, CSS grid, glassmorphism), and vanilla JavaScript. Instant buildless deployment to Cloudflare Pages.
 
-## Usage
-- Navigate through sections using the responsive navigation bar
-- Download CV using the "Download CV" button
-- Explore work experience and certifications
-- View project details and access:
-  - GitHub repositories
-  - Live demos (where available)
+---
 
-## Live Demo
-You can view the live version of this website at https://fruendly.landingsnet.com
-Hosted using Cloudflare Pages.
+## 🛠️ Tech Stack
+
+- **HTML5 & Modern CSS3** (Variables, Grid, Flexbox, Glassmorphic Backdrop Filters)
+- **Vanilla JavaScript (ES6+)** (CLI emulator, scroll spy, clipboard API, category filtering)
+- **Typography**: Google Fonts (*JetBrains Mono* + *Plus Jakarta Sans*)
+- **Icons**: Font Awesome 6
+- **Hosting & CI/CD**: Cloudflare Pages connected to GitHub repository
+
+---
+
+## 🚀 Local Development
+
+To run or preview locally:
+
+```bash
+# 1. Clone repository
+git clone https://github.com/Frulexi/web_portfolio.git
+cd web_portfolio
+
+# 2. Serve with any static web server (e.g., Python)
+python3 -m http.server 8080
+
+# 3. Open http://localhost:8080 in your browser
+```
+
+---
+
+## 📬 Contact
+
+- **Email**: [fruendly.alexis@gmail.com](mailto:fruendly.alexis@gmail.com)
+- **LinkedIn**: [linkedin.com/in/fruendly-alexis-a348a8152](https://www.linkedin.com/in/fruendly-alexis-a348a8152)
+- **GitHub**: [github.com/Frulexi](https://github.com/Frulexi)
