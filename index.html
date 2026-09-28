@@ -1,419 +1,958 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fruendly's Portfolio</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo.png">
-    <link rel="icon" type="image/png" sizes="64x64" href="./assets/logo.png">
-    <link rel="icon" type="image/png" sizes="128x128" href="./assets/logo.png">
-    <link rel="shortcut icon" type="image/png" href="./assets/logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/logo.png">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <!-- Bootstrap Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
-      <div class="container">
-        <a class="navbar-brand fw-bold text-primary" href="#">Fruendly Alexis</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#experience2">Experience</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#certificates">Certificates</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Fruendly Alexis | Senior Tech Ops Specialist</title>
+  <meta name="description" content="Portfolio of Fruendly Alexis — Senior Tech Ops Specialist (SecOps & Systems). Fleet administration, GCP, Docker, Autonomous AI Agents, Proxmox, and Enterprise Security." />
+  <meta name="keywords" content="Fruendly Alexis, Tech Ops, SecOps, Cybersecurity, Autonomous Agents, Proxmox, GCP, Jamf, Intune, Docker, Terraform, Homelab" />
+  <meta name="author" content="Fruendly Alexis" />
 
-    <!-- Profile Section -->
-    <section id="profile" class="container">
-      <div class="row align-items-center min-vh-100 pt-5">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <div class="section__pic-container">
-            <img src="./assets/profile2.png" alt="Fruendly Alexis profile picture" class="img-fluid rounded shadow" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fruendly Alexis | Senior Tech Ops Specialist" />
+  <meta property="og:description" content="Senior Tech Ops Specialist with expertise in SecOps, fleet administration, GCP, autonomous AI agents, and enterprise homelab infrastructure." />
+  <meta property="og:image" content="./assets/profile2.png" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="./assets/logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom Cyber Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- =========================================================================
+       CYBER NAVIGATION BAR
+       ========================================================================= -->
+  <nav class="cyber-nav" id="navbar">
+    <div class="cyber-container nav-content">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-badge">FA</span>
+        <span>fruendly<span class="brand-prompt">@ops</span>:~$</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link"><span class="prefix">//</span>about</a></li>
+        <li><a href="#homelab" class="nav-link"><span class="prefix">//</span>homelab</a></li>
+        <li><a href="#experience" class="nav-link"><span class="prefix">//</span>experience</a></li>
+        <li><a href="#certificates" class="nav-link"><span class="prefix">//</span>certs</a></li>
+        <li><a href="#projects" class="nav-link"><span class="prefix">//</span>projects</a></li>
+        <li><a href="#contact" class="nav-link"><span class="prefix">//</span>contact</a></li>
+        <li>
+          <a href="./assets/FruendlyResume.pdf" target="_blank" class="nav-cta">
+            <i class="fas fa-file-pdf"></i> resume.pdf
+          </a>
+        </li>
+      </ul>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       HERO SECTION
+       ========================================================================= -->
+  <section id="hero" class="hero-section">
+    <div class="cyber-container">
+      <div class="hero-grid">
+        
+        <!-- Left: Introduction & Stats -->
+        <div class="hero-intro">
+          <div class="status-pill">
+            <span class="beacon-dot"></span>
+            <span>SYSTEM STATUS: OPERATIONAL // OPEN TO OPPORTUNITIES</span>
+          </div>
+
+          <div class="hero-pretitle">
+            <span>&gt;_ whoami</span>
+          </div>
+
+          <h1 class="hero-title">Fruendly Alexis</h1>
+          <h2 class="hero-subtitle">
+            Senior Tech Ops Specialist <span class="text-cyan">//</span> <span class="highlight">SecOps &amp; Cloud Systems</span>
+          </h2>
+
+          <p class="hero-bio">
+            Bridging enterprise systems engineering, cloud infrastructure automation, and cybersecurity defense. 
+            Managing 400+ endpoints across global fleets, orchestrating containerized microservices, and securing modern hybrid cloud environments.
+          </p>
+
+          <!-- Metrics Strip -->
+          <div class="hero-stats-strip">
+            <div class="stat-item">
+              <span class="stat-num">400+</span>
+              <span class="stat-label">Fleet Endpoints</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">8</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">4+</span>
+              <span class="stat-label">Years In Ops</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">99.9%</span>
+              <span class="stat-label">Lab Uptime</span>
+            </div>
+          </div>
+
+          <!-- Hero Actions -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn-cyber-primary">
+              <i class="fas fa-terminal"></i> View Projects
+            </a>
+            <a href="#homelab" class="btn-cyber-secondary">
+              <i class="fas fa-server"></i> Explore Homelab
+            </a>
+            <a href="./assets/FruendlyResume.pdf" target="_blank" class="btn-cyber-secondary">
+              <i class="fas fa-download"></i> Download CV
+            </a>
+          </div>
+
+          <!-- Socials -->
+          <div class="hero-socials">
+            <a href="https://github.com/Frulexi" target="_blank" class="social-link" title="GitHub Profile">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/fruendly-alexis-a348a8152" target="_blank" class="social-link" title="LinkedIn Profile">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:fruendly@landingsnet.com" class="social-link" title="Direct Email">
+              <i class="fas fa-envelope"></i>
+            </a>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="section__text text-center text-lg-start">
-            <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Fruendly Alexis</h1>
-            <p class="section__text__p2">Senior Tech Ops Specialist</p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2"
-                onclick="window.open('./assets/FruendlyResume.pdf')"
-              >
-                Download CV
-              </button>
-              <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                Contact Info
-              </button>
-            </div>
-            <div id="socials-container">
-              <img
-                src="./assets/linkedin.png"
-                alt="My LinkedIn profile"
-                class="icon"
-                onclick="openlink('https://www.linkedin.com/in/fruendly-alexis-a348a8152');"
-              />
-              <img
-                src="./assets/github.png"
-                alt="My Github profile"
-                class="icon"
-                onclick="window.open('https://github.com/Frulexi', '_blank')"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="container py-5">
-      <p class="section__text__p1 text-center">Get To Know More</p>
-      <h1 class="title text-center">About Me</h1>
-      <div class="row mt-4">
-        <div class="col-md-6 mb-4">
-          <div class="about-details-container">
-            <div class="row g-4">
-              <div class="col-sm-6">
-                <div class="details-container">
-                  <img
-                    src="./assets/experience.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <h3>Experience</h3>
-                  <p>4+ years <br />System administration </p>
+        <!-- Right: Profile Terminal Card -->
+        <div class="hero-visual-card">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="terminal-dot dot-red"></span>
+                <span class="terminal-dot dot-yellow"></span>
+                <span class="terminal-dot dot-green"></span>
+              </div>
+              <div class="terminal-title">ops_console.sh</div>
+              <div class="terminal-badge">LIVE</div>
+            </div>
+
+            <div class="terminal-body">
+              <!-- Visual Profile Banner -->
+              <div class="hero-profile-banner">
+                <div class="profile-avatar-wrapper">
+                  <img src="./assets/profile2.png" alt="Fruendly Alexis" class="profile-avatar-img" />
+                  <span class="avatar-badge-online" title="Active"></span>
+                </div>
+                <div class="profile-banner-info">
+                  <h4>Fruendly Alexis</h4>
+                  <p>Senior Tech Ops Specialist @ INSHUR</p>
+                  <div class="sub-tag">B.S. Cybersecurity &amp; Info Assurance</div>
                 </div>
               </div>
-              <div class="col-sm-6">
-                <div class="details-container">
-                  <img
-                    src="./assets/education.png"
-                    alt="Education icon"
-                    class="icon"
-                  />
-                  <h3>Education</h3>
-                  <p>Bachelors Degree<br />CyberSecurity & Information Insurance</p>
+
+              <!-- Interactive CLI Terminal -->
+              <div class="interactive-terminal" style="margin-top: 1rem;">
+                <div class="cli-history" id="cliHistory">
+                  <div class="cli-line">
+                    <span class="cli-prompt">fruendly@ops:~$</span> <span class="cli-cmd">cat profile.json</span>
+                    <div class="cli-resp">
+                      { "specialization": "TechOps &amp; Cloud Security", "status": "Ready for challenges", "terminal": "interactive" }
+                    </div>
+                  </div>
+                  <div class="cli-line">
+                    <span class="cli-prompt">fruendly@ops:~$</span> <span class="cli-cmd">status --all</span>
+                    <div class="cli-resp">
+                      [OK] Fleet Management: 400+ Macs/PCs<br/>
+                      [OK] Autonomous AI: Max (Proxmox LXC) &amp; Mini (M1)<br/>
+                      [OK] Cloud: GCP Associate Cloud Engineer<br/>
+                      [OK] Lab: Proxmox VE + UniFi + Docker
+                    </div>
+                  </div>
+                </div>
+
+                <form class="cli-input-form" id="cliForm" onsubmit="handleCliCommand(event);">
+                  <span class="cli-prompt">ops:~$</span>
+                  <input type="text" class="cli-input" id="cliInput" placeholder="type 'help' or click commands below..." autocomplete="off" />
+                </form>
+
+                <div class="quick-commands">
+                  <button type="button" class="cmd-chip" onclick="runQuickCommand('help')">help</button>
+                  <button type="button" class="cmd-chip" onclick="runQuickCommand('skills')">skills</button>
+                  <button type="button" class="cmd-chip" onclick="runQuickCommand('agents')">agents</button>
+                  <button type="button" class="cmd-chip" onclick="runQuickCommand('homelab')">homelab</button>
+                  <button type="button" class="cmd-chip" onclick="runQuickCommand('certs')">certs</button>
+                  <button type="button" class="cmd-chip" onclick="runQuickCommand('contact')">contact</button>
+                  <button type="button" class="cmd-chip" onclick="runQuickCommand('clear')">clear</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="text-container">
-            <p>
-              IT professional with a strong foundation in security and a growing passion for DevOps and cloud operations. 
-              Currently pursuing the Google Cloud Associate Cloud Engineer certification while self-hosting services using Docker Compose to deepen hands-on experience in automation, infrastructure as code, and system reliability. 
-              Certified in Security+, Pentest+, and Project+, with real-world experience managing hybrid environments, GCP, Jamf, Intune, and GitHub. 
-              Looking to combine infrastructure knowledge with proactive security practices.
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ABOUT & COMPETENCIES (BENTO)
+       ========================================================================= -->
+  <section id="about">
+    <div class="cyber-container">
+      <div class="section-header">
+        <div class="section-prompt">
+          <i class="fas fa-microchip"></i> // 01. INTEL &amp; CAPABILITIES
+        </div>
+        <h2 class="section-title">About &amp; Core Arsenal</h2>
+        <p class="section-desc">
+          Rooted in proactive cybersecurity defense and scaled through DevOps automation and cloud operations.
+        </p>
+      </div>
+
+      <div class="about-bento">
+        <!-- Biography Card -->
+        <div class="bento-card">
+          <h3><i class="fas fa-shield-halved text-cyan"></i> The Mission</h3>
+          <p>
+            I am a Senior Tech Ops Specialist with a Bachelor's Degree in Cybersecurity &amp; Information Assurance, dedicated to building resilient, automated, and secure systems.
+          </p>
+          <p>
+            In my day-to-day operations, I manage a global fleet of 400+ macOS and Windows endpoints with Jamf Pro and Microsoft Intune, lead vulnerability triage via HackerOne, and craft automation tooling using Python, Google AppScript, and Docker containers.
+          </p>
+          <p>
+            Beyond enterprise administration, I self-host multi-node infrastructure, write Ansible and Terraform configurations, and continuously pursue advanced cloud engineering—combining practical DevOps workflows with zero-trust security principles.
+          </p>
+          <div class="bento-footer">
+            <span class="text-cyan font-mono" style="font-size: 0.85rem;">
+              <i class="fas fa-location-dot"></i> Greater New York City Area / Remote
+            </span>
+          </div>
+        </div>
+
+        <!-- Highlights Card -->
+        <div class="bento-card" style="display: flex; flex-direction: column; justify-content: center; gap: 1rem;">
+          <div class="competency-item">
+            <div class="competency-head">
+              <i class="fas fa-graduation-cap competency-icon"></i>
+              <h4>Education</h4>
+            </div>
+            <p style="margin: 0; font-size: 0.88rem; line-height: 1.5;">
+              <strong>B.S. Cyber Security &amp; Info Assurance</strong> — WGU (2024)<br/>
+              <span class="text-muted" style="font-size: 0.8rem;">A.S. Cyber Security — Suffolk Community College (2019)</span>
+            </p>
+          </div>
+
+          <div class="competency-item">
+            <div class="competency-head">
+              <i class="fas fa-certificate competency-icon"></i>
+              <h4>Cloud Credential</h4>
+            </div>
+            <p style="margin: 0; font-size: 0.88rem;">
+              <strong>Associate Cloud Engineer (GCCA)</strong><br/>
+              Google Cloud Platform
+            </p>
+          </div>
+
+          <div class="competency-item">
+            <div class="competency-head">
+              <i class="fas fa-user-shield competency-icon"></i>
+              <h4>Security Certifications</h4>
+            </div>
+            <p style="margin: 0; font-size: 0.88rem;">
+              CompTIA Security+, PenTest+, CySA+, &amp; ISC2 SSCP / CCSP
             </p>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Experience Section -->
-    <section id="experience2" class="container py-5">
-      <p class="section__text__p1 text-center">Explore My</p>
-      <h1 class="title text-center">Experience</h1>
-      <div class="row mt-4">
-        <div class="col-md-4 mb-4">
-          <div class="job-container">
-            <h3 class="job-title">Senior Tech Ops Specialist</h3>
-            <h4 class="company">INSHUR</h4>
-            <p class="job-dates">February 2023 - Present</p>
-            <ul class="responsibilities">
-              <li>Managing a fleet of (Mac/Windows) devices using Jamf and Intune for over 400 Global employees.</li>
-              <li>Participating in internal vulnerability triage efforts via HackerOne.</li>
-              <li>Contributing to internal tooling with AppScript, Python, and Docker.</li>
-              <li>Supporting and training junior members of the team.</li>
-            </ul>
+      <!-- Competency Matrix Grid -->
+      <div class="competency-grid">
+        <div class="competency-item">
+          <div class="competency-head">
+            <i class="fas fa-cloud competency-icon"></i>
+            <h4>Cloud &amp; DevOps Infrastructure</h4>
+          </div>
+          <div class="competency-tags">
+            <span class="tech-tag">Google Cloud (GCP)</span>
+            <span class="tech-tag">Docker &amp; Compose</span>
+            <span class="tech-tag">Terraform IaC</span>
+            <span class="tech-tag">Ansible</span>
+            <span class="tech-tag">Cloudflare Tunnels</span>
+            <span class="tech-tag">Linux / Bash</span>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="job-container">
-            <h3 class="job-title">Tech Ops Specialist</h3>
-            <h4 class="company">INSHUR</h4>
-            <p class="job-dates">June 2023 - February 2025</p>
-            <ul class="responsibilities">
-              <li>Managed MDMs (Jamf, Intune) and Protection (Sophos), ensuring compliance with security policies</li>
-              <li>Secured user accounts in Google Workspace / O365, identity management, and access control best practices</li>
-              <li>Provided infrastructure support using GCP, GitHub, and HackerOne platforms.</li>
-              <li>Delivered support using: Postman, Python, JavaScript, MongoDB, BigQuery, SQL.</li>
-            </ul>
+
+        <div class="competency-item">
+          <div class="competency-head">
+            <i class="fas fa-laptop-code competency-icon"></i>
+            <h4>Fleet &amp; Endpoint Engineering</h4>
+          </div>
+          <div class="competency-tags">
+            <span class="tech-tag">Jamf Pro (macOS)</span>
+            <span class="tech-tag">Microsoft Intune</span>
+            <span class="tech-tag">Zero-Touch Provisioning</span>
+            <span class="tech-tag">Compliance Policies</span>
+            <span class="tech-tag">Fleet Automation</span>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="job-container">
-            <h3 class="job-title">Level II Technician</h3>
-            <h4 class="company">Future Tech</h4>
-            <p class="job-dates">June 2021 - June 2023</p>
-            <ul class="responsibilities">
-              <li>Provided technical support for hardware and software issues.</li>
-              <li>Assisted in network troubleshooting and maintenance.</li>
-              <li>Trained junior technicians and documented processes.</li>
-            </ul>
+
+        <div class="competency-item">
+          <div class="competency-head">
+            <i class="fas fa-lock competency-icon"></i>
+            <h4>Security &amp; Identity Governance</h4>
+          </div>
+          <div class="competency-tags">
+            <span class="tech-tag">HackerOne Triage</span>
+            <span class="tech-tag">Sophos EDR</span>
+            <span class="tech-tag">Google Workspace IAM</span>
+            <span class="tech-tag">Entra ID / M365</span>
+            <span class="tech-tag">Least Privilege</span>
+          </div>
+        </div>
+
+        <div class="competency-item">
+          <div class="competency-head">
+            <i class="fas fa-robot competency-icon"></i>
+            <h4>AI Engineering &amp; Systems Automation</h4>
+          </div>
+          <div class="competency-tags">
+            <span class="tech-tag">Autonomous AI Agents</span>
+            <span class="tech-tag">Claude / GenAI</span>
+            <span class="tech-tag">Local LLM (Ollama)</span>
+            <span class="tech-tag">Tool-Calling Pipelines</span>
+            <span class="tech-tag">Python &amp; AppScript</span>
+            <span class="tech-tag">REST APIs / SQL</span>
           </div>
         </div>
       </div>
-    </section>
-    
-    <!-- Certificates Section -->
-    <section id="certificates" class="container py-5">
-      <p class="section__text__p1 text-center">Explore My</p>
-      <h1 class="title text-center">Certificates</h1>
-      <div class="row mt-4">
-        <div class="col-md-6 mb-4">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Security</h2>
-            <div class="row g-4">
-              <div class="col-sm-6">
-                <article>
-                  <img
-                    src="./assets/GCCA.png"
-                    alt="GCP certificate"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Associate Cloud Engineer Certification</h3>
-                    <p>Oct 2025</p>
-                  </div>
-                </article>
-              </div>
-              <div class="col-sm-6">
-                <article>
-                  <img
-                    src="./assets/CompTIA_PenTest_2B.png"
-                    alt="PenTest+ certificate"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>PenTest+</h3>
-                    <p>June 2024</p>
-                  </div>
-                </article>
-              </div>
-              <div class="col-sm-6">
-                <article>
-                  <img
-                    src="./assets/Comptia_CySA_2Bce.png"
-                    alt="CySA+ certificate"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>CySA+</h3>
-                    <p>April 2024</p>
-                  </div>
-                </article>
-              </div>
-              <div class="col-sm-6">
-                <article>
-                  <img
-                    src="./assets/ISC2_SSCP.png"
-                    alt="SSCP certificate"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>SSCP</h3>
-                    <p>March 2024</p>
-                  </div>
-                </article>
-              </div>
-              <div class="col-sm-6">
-                <article>
-                  <img
-                    src="./assets/CompTIA_Security_2Bce.png"
-                    alt="Security+ certificate"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Security+</h3>
-                    <p>Oct 2023</p>
-                  </div>
-                </article>
-              </div>
-            </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       HOMELAB & DEVOPS SHOWCASE (FEATURED)
+       ========================================================================= -->
+  <section id="homelab" class="homelab-section">
+    <div class="cyber-container">
+      <div class="section-header">
+        <div class="section-prompt">
+          <i class="fas fa-network-wired"></i> // 02. PRODUCTION HOMELAB
+        </div>
+        <h2 class="section-title">Homelab &amp; Infrastructure Architecture</h2>
+        <p class="section-desc">
+          A 24/7 dedicated enterprise homelab environment designed for staging, continuous testing of Infrastructure-as-Code (IaC), and self-hosting resilient microservices.
+        </p>
+      </div>
+
+      <!-- Homelab Hero Banner -->
+      <div class="homelab-banner">
+        <div>
+          <h3><i class="fas fa-server text-cyan"></i> Bare-Metal Hypervisor &amp; Virtualization</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+            Powered by a dedicated Proxmox VE hypervisor running isolated Linux Containers (LXC) and Virtual Machines. Services are declaratively provisioned with Ansible playbooks and Docker Compose, achieving complete environment reproducibility and high uptime.
+          </p>
+          <div class="infra-tags">
+            <span class="tech-tag">Proxmox VE</span>
+            <span class="tech-tag">UniFi Gateway Ultra</span>
+            <span class="tech-tag">Twingate Zero Trust</span>
+            <span class="tech-tag">Docker Compose</span>
+            <span class="tech-tag">Ansible Automation</span>
+            <span class="tech-tag">Cloudflare Pages &amp; Tunnels</span>
           </div>
         </div>
-        <div class="col-md-6 mb-4">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Other</h2>
-            <div class="row g-4">
-              <div class="col-sm-6">
-                <article>
-                  <img
-                    src="./assets/CompTIA_Project_2B.png"
-                    alt="Project+ certificate"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Project+</h3>
-                    <p>July 2023</p>
-                  </div>
-                </article>
-              </div>
-              <div class="col-sm-6">
-                <article>
-                  <img
-                    src="./assets/CompTIA_Project_2B.png"
-                    alt="Network+ certificate"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Network+</h3>
-                    <p>March 2023</p>
-                  </div>
-                </article>
-              </div>
-              <div class="col-sm-6">
-                <article>
-                  <img
-                    src="./assets/CompTIA_A_2Bce.png"
-                    alt="A+ certificate"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>A+</h3>
-                    <p>Dec 2022</p>
-                  </div>
-                </article>
-              </div>
-            </div>
+
+        <div class="homelab-specs">
+          <div class="spec-row">
+            <span class="spec-label">Hypervisor:</span>
+            <span class="spec-val">Proxmox VE 8.x</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Gateway:</span>
+            <span class="spec-val">UniFi UCG-Ultra</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Security:</span>
+            <span class="spec-val">VLAN Isolation + Zero Trust</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Reverse Proxy:</span>
+            <span class="spec-val">NGINX Proxy Manager (SSL)</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Config Mgmt:</span>
+            <span class="spec-val">Ansible Vault + Git</span>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="container py-5">
-      <p class="section__text__p1 text-center">Check Out My</p>
-      <h1 class="title text-center">Projects</h1>
-      <div class="row mt-4">
-        <div class="col-md-6 mb-4">
-          <div class="project-container">
-            <div class="project-image">
-              <img src="./assets/selfhosted.png" alt="Docker Self-Hosted Lab" class="img-fluid rounded shadow-sm">
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Docker Self-Hosted Lab Infrastructure</h3>
-              <p class="project-description">
-                A comprehensive Docker-powered self-hosted lab managed by Terraform. Features include Flame for centralized access, 
-                NGINX Proxy Manager for reverse proxy with SSL, NextCloud for file-sharing, MariaDB for database services, 
-                and Portainer for container management.
-              </p>
-              <div class="project-tech">
-                <span class="tech-badge">Docker</span>
-                <span class="tech-badge">Terraform</span>
-                <span class="tech-badge">NextCloud</span>
-                <span class="tech-badge">MariaDB</span>
-                <span class="tech-badge">Portainer</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/Frulexi/self_hosted" target="_blank" class="btn btn-sm btn-outline-primary">
-                  <i class="fab fa-github"></i> View Code
-                </a>
-              </div>
-            </div>
+      <!-- Infrastructure Architecture Cards -->
+      <div class="homelab-cards-grid">
+        
+        <div class="infra-card">
+          <div class="infra-card-header">
+            <div class="infra-icon"><i class="fas fa-cubes"></i></div>
+            <div class="infra-status"><i class="fas fa-circle" style="font-size: 0.5rem;"></i> ACTIVE</div>
+          </div>
+          <h4>Containerized Microservices</h4>
+          <p>
+            Running self-hosted mission-critical services including Portainer for container orchestration, NGINX Proxy Manager for SSL certificates, Nextcloud for private cloud storage, MariaDB databases, and Home Assistant.
+          </p>
+          <div class="infra-tags">
+            <span class="tech-tag">Portainer</span>
+            <span class="tech-tag">Nextcloud</span>
+            <span class="tech-tag">MariaDB</span>
+            <span class="tech-tag">NPM</span>
           </div>
         </div>
-        <div class="col-md-6 mb-4">
-          <div class="project-container">
-            <div class="project-image">
-              <img src="./assets/appletrans.png" alt="Apple Card to CSV Converter" class="img-fluid rounded shadow-sm">
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Apple Card Transaction to CSV Converter</h3>
-              <p class="project-description">
-                A Flask web application that converts Apple Card transaction screenshots into structured CSV files using OCR (Tesseract). 
-                Features include transaction extraction, editable data interface, and CSV export functionality.
-              </p>
-              <div class="project-tech">
-                <span class="tech-badge">Python</span>
-                <span class="tech-badge">Flask</span>
-                <span class="tech-badge">OCR</span>
-                <span class="tech-badge">JavaScript</span>
-                <span class="tech-badge">Docker</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/Frulexi/apple_trans_to_csv" target="_blank" class="btn btn-sm btn-outline-primary">
-                  <i class="fab fa-github"></i> View Code
-                </a>
-                <a href="https://appletrans.landingsnet.com/" target="_blank" class="btn btn-sm btn-outline-secondary">
-                  <i class="fas fa-external-link-alt"></i> Live Demo
-                </a>
-              </div>
-            </div>
+
+        <div class="infra-card">
+          <div class="infra-card-header">
+            <div class="infra-icon"><i class="fas fa-shield-virus"></i></div>
+            <div class="infra-status"><i class="fas fa-circle" style="font-size: 0.5rem;"></i> ENFORCED</div>
+          </div>
+          <h4>Zero Trust &amp; UniFi Networking</h4>
+          <p>
+            Architected with a UniFi Cloud Gateway Ultra. Strict VLAN separation between Trusted devices, IoT endpoints, and DMZ/Lab services. Remote access secured via Twingate Software-Defined Perimeter and Cloudflare Zero Trust tunnels without exposing public ports.
+          </p>
+          <div class="infra-tags">
+            <span class="tech-tag">UniFi OS</span>
+            <span class="tech-tag">VLAN Segmentation</span>
+            <span class="tech-tag">Twingate SDP</span>
+            <span class="tech-tag">Cloudflare Tunnel</span>
           </div>
         </div>
+
+        <div class="infra-card">
+          <div class="infra-card-header">
+            <div class="infra-icon"><i class="fas fa-terminal"></i></div>
+            <div class="infra-status"><i class="fas fa-circle" style="font-size: 0.5rem;"></i> AUTOMATED</div>
+          </div>
+          <h4>IaC &amp; Asset Management</h4>
+          <p>
+            Homelab configuration managed via version-controlled Ansible playbooks with encrypted Ansible Vault for credentials. Hardware inventory, component tracking, and lifecycles tracked via an automated self-hosted Snipe-IT ITAM instance.
+          </p>
+          <div class="infra-tags">
+            <span class="tech-tag">Ansible Vault</span>
+            <span class="tech-tag">Terraform</span>
+            <span class="tech-tag">Snipe-IT ITAM</span>
+            <span class="tech-tag">GitOps</span>
+          </div>
+        </div>
+
+        <div class="infra-card">
+          <div class="infra-card-header">
+            <div class="infra-icon"><i class="fas fa-brain text-cyan"></i></div>
+            <div class="infra-status"><i class="fas fa-circle" style="font-size: 0.5rem;"></i> ORCHESTRATED</div>
+          </div>
+          <h4>Autonomous AI Agent Fleet (Max &amp; Mini)</h4>
+          <p>
+            Distributed multi-agent operational network: <strong>Max</strong> operates autonomously within an isolated Proxmox VE LXC container, equipped with direct API telemetry to the hypervisor, UniFi gateway, Snipe-IT ITAM, and Docker stacks. <strong>Mini</strong> serves as an Apple Silicon M1 edge dispatcher bridging communication channels and event triggers. Powered by local GPU inference (RTX 3080 / Ollama) and tool-calling agent pipelines under human-in-the-loop security boundaries.
+          </p>
+          <div class="infra-tags">
+            <span class="tech-tag">Autonomous Agents</span>
+            <span class="tech-tag">Max (Proxmox LXC)</span>
+            <span class="tech-tag">Mini (M1 Edge)</span>
+            <span class="tech-tag">Local LLM (Ollama)</span>
+            <span class="tech-tag">Tool-Calling</span>
+            <span class="tech-tag">AIOps</span>
+          </div>
+        </div>
+
+        <!-- Side Venture Card: Turnkey Homelabs -->
+        <div class="infra-card turnkey-highlight">
+          <div class="infra-card-header">
+            <div class="infra-icon"><i class="fas fa-box-open" style="color: var(--accent-emerald);"></i></div>
+            <div class="infra-status" style="color: var(--accent-cyan);"><i class="fas fa-bolt"></i> VENTURE IN PRODUCTION</div>
+          </div>
+          <h4>Turnkey Homelabs Appliance Solutions</h4>
+          <p>
+            Engineered plug-and-play personal cloud and home server appliances deployed on compact Dell OptiPlex Micro Form Factor (MFF) hardware. Each system is pre-configured with Proxmox VE, hardened firewall rules, and containerized stacks to give privacy-conscious users instantaneous access to self-hosted personal clouds without setup complexity.
+          </p>
+          <div class="infra-tags">
+            <span class="tech-tag">Hardware Provisioning</span>
+            <span class="tech-tag">Dell OptiPlex MFF</span>
+            <span class="tech-tag">Proxmox Appliance</span>
+            <span class="tech-tag">Personal Cloud</span>
+          </div>
+        </div>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container py-5">
-      <p class="section__text__p1 text-center">Get in Touch</p>
-      <h1 class="title text-center">Contact Me</h1>
-      <div class="row justify-content-center mt-4">
-        <div class="col-md-8">
-          <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-              <img
-                src="./assets/email.png"
-                alt="Email icon"
-                class="icon contact-icon"
-              />
-              <p>
-                <a href="mailto:fruendly.alexis@gmail.com">fruendly.alexis@gmail.com</a>
-              </p>
+  <!-- =========================================================================
+       EXPERIENCE SECTION (TIMELINE)
+       ========================================================================= -->
+  <section id="experience">
+    <div class="cyber-container">
+      <div class="section-header">
+        <div class="section-prompt">
+          <i class="fas fa-clock-rotate-left"></i> // 03. CAREER LOGS
+        </div>
+        <h2 class="section-title">Professional Experience</h2>
+        <p class="section-desc">
+          Documented impact spanning fleet administration, security triage, internal tooling, and client infrastructure support.
+        </p>
+      </div>
+
+      <div class="experience-timeline">
+        
+        <!-- Job 1 -->
+        <div class="timeline-card">
+          <div class="timeline-dot"></div>
+          <div class="timeline-header">
+            <div>
+              <h3 class="role-title">Senior Tech Ops Specialist (SecOps &amp; Systems)</h3>
+              <div class="company-name">
+                <i class="fas fa-building text-cyan"></i> INSHUR
+              </div>
             </div>
-            <div class="contact-info-container">
-              <img
-                src="./assets/linkedin.png"
-                alt="LinkedIn icon"
-                class="icon contact-icon"
-              />
-              <p>
-                <a href="https://www.linkedin.com/in/fruendly-alexis-a348a8152" target="_blank">LinkedIn</a>
-              </p>
+            <div class="timeline-badge current">
+              <i class="fas fa-circle" style="font-size: 0.5rem;"></i> February 2025 – Present
+            </div>
+          </div>
+
+          <ul class="timeline-responsibilities">
+            <li>Partner with Senior SecOps Engineers to triage, investigate, and remediate critical security incidents, ensuring rapid containment of endpoint, network, and compliance alerts.</li>
+            <li>Directly respond to and mitigate security threats, including successful phishing campaigns, malware infections, and Microsoft 2FA bypass attempts.</li>
+            <li>Execute and analyze internal phishing simulation campaigns to evaluate company-wide risk posture and drive targeted security awareness training.</li>
+            <li>Leverage Generative AI tools (Claude) for accelerated scripting and rapid prototyping, building custom Python and AppScript automations while auditing code for security flaws and enterprise compliance.</li>
+            <li>Orchestrate and maintain an enterprise fleet of 400+ macOS and Windows devices globally using Jamf Pro and Microsoft Intune.</li>
+          </ul>
+
+          <div class="timeline-tech">
+            <span class="tech-tag">SecOps Triage</span>
+            <span class="tech-tag">2FA Defense</span>
+            <span class="tech-tag">Jamf Pro</span>
+            <span class="tech-tag">Microsoft Intune</span>
+            <span class="tech-tag">GCP</span>
+            <span class="tech-tag">Claude / GenAI</span>
+            <span class="tech-tag">Python &amp; AppScript</span>
+          </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="timeline-card">
+          <div class="timeline-dot"></div>
+          <div class="timeline-header">
+            <div>
+              <h3 class="role-title">Tech Ops Specialist</h3>
+              <div class="company-name">
+                <i class="fas fa-building text-cyan"></i> INSHUR
+              </div>
+            </div>
+            <div class="timeline-badge">
+              June 2023 – February 2025
+            </div>
+          </div>
+
+          <ul class="timeline-responsibilities">
+            <li>Administered MDM fleet management (Jamf, Intune) and Sophos Endpoint Protection, maintaining tight security posture and audit compliance.</li>
+            <li>Secured corporate identity and access management (IAM) across Google Workspace and Microsoft 365 following least-privilege principles.</li>
+            <li>Delivered tier-3 operational support querying BigQuery, MongoDB, and SQL with Postman, JavaScript, and Python scripts.</li>
+            <li>Provisioned cloud and code repository infrastructure across GCP and GitHub Enterprise environments.</li>
+          </ul>
+
+          <div class="timeline-tech">
+            <span class="tech-tag">Endpoint Security</span>
+            <span class="tech-tag">Sophos EDR</span>
+            <span class="tech-tag">Google Workspace</span>
+            <span class="tech-tag">Microsoft 365</span>
+            <span class="tech-tag">BigQuery</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">Postman</span>
+          </div>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="timeline-card">
+          <div class="timeline-dot"></div>
+          <div class="timeline-header">
+            <div>
+              <h3 class="role-title">Level II Help Desk / Support Technician</h3>
+              <div class="company-name">
+                <i class="fas fa-building text-cyan"></i> Future Tech Enterprise Inc
+              </div>
+            </div>
+            <div class="timeline-badge">
+              June 2021 – June 2023
+            </div>
+          </div>
+
+          <ul class="timeline-responsibilities">
+            <li>Resolved an average of 20+ technical tickets daily providing expert tier-2 support for Windows desktops, Macs, and enterprise printers.</li>
+            <li>Administered Active Directory, DHCP, and TCP/IP network troubleshooting across corporate client infrastructures.</li>
+            <li>Coordinated and executed the seamless enterprise migration from Microsoft Office 365 to Google Workspace.</li>
+          </ul>
+
+          <div class="timeline-tech">
+            <span class="tech-tag">Active Directory</span>
+            <span class="tech-tag">O365 to Google Workspace Migration</span>
+            <span class="tech-tag">DHCP / TCP/IP</span>
+            <span class="tech-tag">macOS &amp; Windows</span>
+          </div>
+        </div>
+
+        <!-- Job 4 -->
+        <div class="timeline-card">
+          <div class="timeline-dot"></div>
+          <div class="timeline-header">
+            <div>
+              <h3 class="role-title">Field Service Technician II</h3>
+              <div class="company-name">
+                <i class="fas fa-building text-cyan"></i> Toshiba / IBM
+              </div>
+            </div>
+            <div class="timeline-badge">
+              February 2019 – June 2021
+            </div>
+          </div>
+
+          <ul class="timeline-responsibilities">
+            <li>Successfully transitioned the enterprise Walgreens contract from IBM to Toshiba, ensuring seamless continuity of mission-critical field services.</li>
+            <li>Trained and supervised incoming field engineers, contributing to team operational growth and high delivery standards.</li>
+          </ul>
+
+          <div class="timeline-tech">
+            <span class="tech-tag">Field Engineering</span>
+            <span class="tech-tag">Client Contract Transition</span>
+            <span class="tech-tag">Hardware Diagnostics</span>
+            <span class="tech-tag">Team Mentorship</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CERTIFICATIONS MATRIX
+       ========================================================================= -->
+  <section id="certificates">
+    <div class="cyber-container">
+      <div class="section-header">
+        <div class="section-prompt">
+          <i class="fas fa-award"></i> // 04. CREDENTIALS
+        </div>
+        <h2 class="section-title">Industry Certifications</h2>
+        <p class="section-desc">
+          Accredited credentials across Cloud Architecture, Penetration Testing, Systems Security, and Enterprise Operations.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="certs-filter-tabs">
+        <button class="filter-tab active" data-filter="all">All Certs (8)</button>
+        <button class="filter-tab" data-filter="cloud">Cloud (1)</button>
+        <button class="filter-tab" data-filter="security">Security (4)</button>
+        <button class="filter-tab" data-filter="infra">Infrastructure (3)</button>
+      </div>
+
+      <!-- Certs Grid -->
+      <div class="certs-grid">
+        
+        <!-- Cert 1: GCCA -->
+        <div class="cert-card" data-category="cloud">
+          <div class="cert-badge-frame">
+            <img src="./assets/GCCA.png" alt="Google Cloud Certified Associate Cloud Engineer" />
+          </div>
+          <h4 class="cert-title">Associate Cloud Engineer</h4>
+          <div class="cert-issuer">Google Cloud</div>
+          <div class="cert-date">Certified Oct 2025</div>
+        </div>
+
+        <!-- Cert 2: PenTest+ -->
+        <div class="cert-card" data-category="security">
+          <div class="cert-badge-frame">
+            <img src="./assets/CompTIA_PenTest_2B.png" alt="CompTIA PenTest+" />
+          </div>
+          <h4 class="cert-title">CompTIA PenTest+</h4>
+          <div class="cert-issuer">CompTIA</div>
+          <div class="cert-date">June 2024</div>
+        </div>
+
+        <!-- Cert 3: CySA+ -->
+        <div class="cert-card" data-category="security">
+          <div class="cert-badge-frame">
+            <img src="./assets/Comptia_CySA_2Bce.png" alt="CompTIA CySA+" />
+          </div>
+          <h4 class="cert-title">CompTIA CySA+</h4>
+          <div class="cert-issuer">CompTIA</div>
+          <div class="cert-date">April 2024</div>
+        </div>
+
+        <!-- Cert 4: SSCP -->
+        <div class="cert-card" data-category="security">
+          <div class="cert-badge-frame">
+            <img src="./assets/ISC2_SSCP.png" alt="(ISC)² SSCP" />
+          </div>
+          <h4 class="cert-title">Systems Security Certified Practitioner</h4>
+          <div class="cert-issuer">(ISC)²</div>
+          <div class="cert-date">March 2024</div>
+        </div>
+
+        <!-- Cert 5: Security+ -->
+        <div class="cert-card" data-category="security">
+          <div class="cert-badge-frame">
+            <img src="./assets/CompTIA_Security_2Bce.png" alt="CompTIA Security+" />
+          </div>
+          <h4 class="cert-title">CompTIA Security+</h4>
+          <div class="cert-issuer">CompTIA</div>
+          <div class="cert-date">October 2023</div>
+        </div>
+
+        <!-- Cert 6: Network+ (FIXED IMAGE: CompTIA_Network_2Bce.png) -->
+        <div class="cert-card" data-category="infra">
+          <div class="cert-badge-frame">
+            <img src="./assets/CompTIA_Network_2Bce.png" alt="CompTIA Network+" />
+          </div>
+          <h4 class="cert-title">CompTIA Network+</h4>
+          <div class="cert-issuer">CompTIA</div>
+          <div class="cert-date">March 2023</div>
+        </div>
+
+        <!-- Cert 7: Project+ -->
+        <div class="cert-card" data-category="infra">
+          <div class="cert-badge-frame">
+            <img src="./assets/CompTIA_Project_2B.png" alt="CompTIA Project+" />
+          </div>
+          <h4 class="cert-title">CompTIA Project+</h4>
+          <div class="cert-issuer">CompTIA</div>
+          <div class="cert-date">July 2023</div>
+        </div>
+
+        <!-- Cert 8: A+ -->
+        <div class="cert-card" data-category="infra">
+          <div class="cert-badge-frame">
+            <img src="./assets/CompTIA_A_2Bce.png" alt="CompTIA A+" />
+          </div>
+          <h4 class="cert-title">CompTIA A+</h4>
+          <div class="cert-issuer">CompTIA</div>
+          <div class="cert-date">December 2022</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PROJECTS SECTION
+       ========================================================================= -->
+  <section id="projects">
+    <div class="cyber-container">
+      <div class="section-header">
+        <div class="section-prompt">
+          <i class="fas fa-folder-open"></i> // 05. CODE &amp; DEPLOYMENTS
+        </div>
+        <h2 class="section-title">Featured Technical Projects</h2>
+        <p class="section-desc">
+          Hands-on cloud implementations, open-source automation utilities, and self-hosted systems.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        
+        <!-- Project 1: Docker Self-Hosted Lab -->
+        <div class="project-card">
+          <div class="project-image-box">
+            <img src="./assets/selfhosted.png" alt="Docker Self-Hosted Lab Infrastructure Blueprint" />
+            <div class="project-tag-overlay">Ansible &amp; Docker Blueprint</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Ansible &amp; Docker Self-Hosted Staging Blueprint</h3>
+            <p class="project-description">
+              A sanitized public demo and reference repository showcasing my Ansible and Docker Compose infrastructure-as-code patterns. Automates operating system security hardening, Docker Engine setup, and container orchestration across Traefik v3, Authentik IAM, Immich photo cloud, Snipe-IT ITAM, Actual Budget, and Grafana monitoring.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-tag">Ansible</span>
+              <span class="tech-tag">Docker Compose</span>
+              <span class="tech-tag">Traefik</span>
+              <span class="tech-tag">Authentik</span>
+              <span class="tech-tag">Immich</span>
+              <span class="tech-tag">Monitoring</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Frulexi/self_hosted" target="_blank" class="btn-project btn-project-code">
+                <i class="fab fa-github"></i> View Repository
+              </a>
             </div>
           </div>
         </div>
+
+        <!-- Project 2: Apple Card to CSV Converter -->
+        <div class="project-card">
+          <div class="project-image-box">
+            <img src="./assets/appletrans.png" alt="Apple Card Transaction to CSV Converter" />
+            <div class="project-tag-overlay">Production Web App</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Apple Card Transaction to CSV Converter</h3>
+            <p class="project-description">
+              Full-stack Python &amp; Flask application designed to parse Apple Card monthly transaction screenshots into standardized, clean CSV files via optical character recognition (Tesseract OCR). Includes real-time client-side tabular editing, parsing validation, and export capabilities. Containerized with Docker and publicly deployed.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">Tesseract OCR</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Frulexi/apple_trans_to_csv" target="_blank" class="btn-project btn-project-code">
+                <i class="fab fa-github"></i> Source Code
+              </a>
+              <a href="https://appletrans.landingsnet.com/" target="_blank" class="btn-project btn-project-demo">
+                <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="py-4 text-center">
-      <p>© 2024 Fruendly Alexis. All rights reserved.</p>
-    </footer>
+  <!-- =========================================================================
+       CONTACT SECTION
+       ========================================================================= -->
+  <section id="contact">
+    <div class="cyber-container">
+      <div class="section-header">
+        <div class="section-prompt">
+          <i class="fas fa-paper-plane"></i> // 06. TRANSMISSION
+        </div>
+        <h2 class="section-title">Initiate Connection</h2>
+        <p class="section-desc">
+          Looking for a Senior Tech Ops Specialist, SecOps practitioner, or Cloud Infrastructure collaborator? Let's connect.
+        </p>
+      </div>
 
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="script.js"></script>
-  </body>
+      <div class="contact-grid">
+        
+        <!-- Contact Card -->
+        <div class="contact-card">
+          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem;">
+            Direct Transmission Channels
+          </h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem;">
+            Available for Senior Tech Ops, Cloud/DevOps engineering roles, infrastructure consulting, and homelab discussions.
+          </p>
+
+          <div class="contact-items">
+            <!-- Email -->
+            <div class="contact-item-box">
+              <div class="contact-item-left">
+                <div class="contact-icon-box"><i class="fas fa-envelope"></i></div>
+                <div class="contact-item-info">
+                  <h5>Direct Email</h5>
+                  <a href="mailto:fruendly@landingsnet.com">fruendly@landingsnet.com</a>
+                </div>
+              </div>
+              <button class="btn-copy" onclick="copyToClipboard('fruendly@landingsnet.com', 'Email copied to clipboard!')" title="Copy Email">
+                <i class="fas fa-copy"></i> copy
+              </button>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="contact-item-box">
+              <div class="contact-item-left">
+                <div class="contact-icon-box"><i class="fab fa-linkedin-in"></i></div>
+                <div class="contact-item-info">
+                  <h5>Professional Network</h5>
+                  <a href="https://www.linkedin.com/in/fruendly-alexis-a348a8152" target="_blank">linkedin.com/in/fruendly-alexis</a>
+                </div>
+              </div>
+              <a href="https://www.linkedin.com/in/fruendly-alexis-a348a8152" target="_blank" class="btn-copy">
+                <i class="fas fa-external-link-alt"></i> open
+              </a>
+            </div>
+
+            <!-- GitHub -->
+            <div class="contact-item-box">
+              <div class="contact-item-left">
+                <div class="contact-icon-box"><i class="fab fa-github"></i></div>
+                <div class="contact-item-info">
+                  <h5>Code Repositories</h5>
+                  <a href="https://github.com/Frulexi" target="_blank">github.com/Frulexi</a>
+                </div>
+              </div>
+              <a href="https://github.com/Frulexi" target="_blank" class="btn-copy">
+                <i class="fas fa-external-link-alt"></i> open
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal Contact Box -->
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+            </div>
+            <div class="terminal-title">contact_dispatcher.sh</div>
+            <div class="terminal-badge">READY</div>
+          </div>
+          <div class="terminal-body" style="font-size: 0.88rem;">
+            <p style="color: var(--accent-cyan); margin-bottom: 0.75rem;">
+              <i class="fas fa-terminal"></i> echo "Let's build secure &amp; resilient systems together."
+            </p>
+            <div style="background: var(--bg-deep); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); color: var(--text-secondary); line-height: 1.8;">
+              <span class="text-emerald">&gt; echo $ENGINEER</span><br/>
+              "Fruendly Alexis"<br/>
+              <span class="text-emerald">&gt; echo $SPECIALIZATION</span><br/>
+              "Fleet Ops (400+ nodes) | Cloud &amp; GCP | Enterprise Security"<br/>
+              <span class="text-emerald">&gt; echo $HOMELAB_STACK</span><br/>
+              "Proxmox VE | UniFi Network | Docker | Ansible Vault"<br/>
+              <span class="text-emerald">&gt; mail -s "Opportunity" fruendly@landingsnet.com</span><br/>
+              [STATUS] Dispatcher listening for incoming transmissions.
+            </div>
+
+            <div style="margin-top: 1.5rem; text-align: center;">
+              <a href="mailto:fruendly@landingsnet.com" class="btn-cyber-primary" style="width: 100%; justify-content: center;">
+                <i class="fas fa-paper-plane"></i> Send Direct Email
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="cyber-footer">
+    <div class="cyber-container footer-content">
+      <div class="footer-brand">
+        fruendly@ops:~$ <span>echo "© 2026 Fruendly Alexis. All rights reserved."</span>
+      </div>
+      <div class="footer-status">
+        <span class="text-emerald"><i class="fas fa-circle" style="font-size: 0.5rem;"></i></span> ALL SERVICES HEALTHY // HOSTED ON CLOUDFLARE PAGES
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="cyberToast" class="cyber-toast">
+    <i class="fas fa-circle-check text-emerald"></i>
+    <span id="toastMessage">Copied to clipboard!</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
 </html>
